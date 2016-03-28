@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Carl Reynolds, ">
+
+
+        <title>Colophon for my digital life circa 2016 // Carl Reynolds // </title>
+
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./theme/css/pure.css">
+    <link rel="stylesheet" href="./theme/css/pygments.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.1/jquery.fitvids.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".content").fitVids();
+        });
+    </script>
+</head>
+
+<body>
+    <div class="pure-g-r" id="layout">
+        <div class="sidebar pure-u">
+            <div class="cover-img" style="background-image: url('/images/Carl2.jpg')">
+                <div class="cover-body">
+                    <header class="header">
+                        <hgroup>
+                            <h1 class="brand-main"><a href=".">Carl Reynolds</a></h1>
+                            <p class="tagline"></p>
+                                <p class="links"><a href="./pages/about.html"></a></p>
+                                <p class="social">
+                                    <a href="https://github.com/drcjar/">
+                                        <i class="fa fa-github fa-3x"></i>
+                                    </a>
+                                    <a href="https://uk.linkedin.com/in/carl-reynolds-36700025">
+                                        <i class="fa fa-linkedin-square fa-3x"></i>
+                                    </a>
+                                    <a href="https://twitter.com/drcjar">
+                                        <i class="fa fa-twitter-square fa-3x"></i>
+                                    </a>
+                                    <a href="mailto:drcjar@gmail.com">
+                                        <i class="fa fa-envelope-square fa-3x"></i>
+                                    </a>
+                                </p>
+                        </hgroup>
+                    </header>
+                </div>
+            </div>
+        </div>
+    <div class="pure-u">
+        <div class="content">
+            <section class="post">
+                <header class="post-header">
+                    <h1>Colophon for my digital life circa 2016</h1>
+                        <p class="post-meta">
+                            // under                                 <a class="post-category" href="./tag/meta.html">meta</a>
+                                <a class="post-category" href="./tag/colophon.html">colophon</a>
+                        </p>
+                </header>
+            </section>
+            <hr />
+<p>As of today I've decided to use pandoc markdown <a href="https://github.com/dsanson/Pandoc.tmbundle/blob/master/Support/doc/cheatsheet.markdown">(with the assistance of this cheatsheet)</a>. I'm planning on getting <a href="http://unconj.ca/blog/linting-prose-in-emacs.html">emacs going with prose-lint integration</a> soon.</p>
+<p>Anyway the pandoc markdown that I make can then be turned into:</p>
+<ol type="1">
+<li><p><a href="http://blog.getpelican.com/">pelican blog</a> and rendered reasonably nice looking through the use of a special <a href="https://github.com/PurePelicanTheme/pure-single">pelican blog theme</a>. My pelicon configuration file lives <a href="https://gist.github.com/drcjar/606fe4c29d6df2fe27a3">here</a>.</p></li>
+<li><p>LaTeX if necessary for academical writing. I use bibtex with <a href="http://jabref.sourceforge.net/">jabref</a> currently for managing my bibliography. I use <a href="https://www.ncbi.nlm.nih.gov/pubmed/">pubmed</a> and <a href="https://scholar.google.co.uk/">google scholar</a> for finding the things. <a href="https://sci-hub.io/">Sci-hub</a> appears good for access problems. Though there's actually even a <a href="https://github.com/tompollard/phd_thesis_markdown">markdown thesis template</a> converting to LaTeX is v nice to have as a backup.</p></li>
+<li><p>Word for collaborating on academical writing with people that wont use anything else.</p></li>
+</ol>
+<p>For me it generally all happens on a thinkpad running ubuntu. And depends a bit on some <a href="https://dont-be-afraid-to-commit.readthedocs.org/en/latest/">python, pip, virtual env and github basics</a> which I supplement with <a href="https://virtualenvwrapper.readthedocs.org/en/latest/">virtualenv wrapper</a>.</p>
+<p>For analytical work I'm lately making use of python in <a href="http://jupyter.readthedocs.org/en/latest/index.html">Jupyter Notebook</a> with <a href="https://github.com">github</a> and <a href="https://nbviewer.jupyter.org/">nbviewer</a> and also <a href="https://gist.github.com/">github gists</a> with <a href="https://bl.ocks.org/">Bl.ocks</a>. In particular lately I seem to have mostly been using <a href="http://pandas.pydata.org/">pandas</a>, <a href="http://matplotlib.org/">matplotlib</a>, <a href="http://statsmodels.sourceforge.net/">statsmodels</a> and <a href="https://github.com/python-visualization/folium">folium</a>.</p>
+
+            <a href="#" class="go-top">Go Top</a>
+<footer class="footer">
+    <p>&copy; Carl Reynolds &ndash;
+        Built with <a href="https://github.com/PurePelicanTheme/pure-single">Pure Theme</a>
+        for <a href="http://blog.getpelican.com/">Pelican</a>
+    </p>
+</footer>        </div>
+    </div>
+    </div>
+    <script>
+        var $top = $('.go-top');
+
+        // Show or hide the sticky footer button
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 200) {
+                $top.fadeIn(200);
+            } else {
+                $top.fadeOut(200);
+            }
+        });
+
+        // Animate the scroll to top
+        $top.click(function(event) {
+            event.preventDefault();
+            $('html, body').animate({scrollTop: 0}, 300);
+        })
+
+        // Makes sure that the href="#" attached to the <a> elements
+        // don't scroll you back up the page.
+        $('body').on('click', 'a[href="#"]', function(event) {
+            event.preventDefault();
+        });
+    </script>
+
+</body>
+</html>
