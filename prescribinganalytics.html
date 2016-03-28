@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Carl Reynolds, ">
+
+
+        <title>Prescribing Analytics: how drug data can save the NHS millions // Carl Reynolds // </title>
+
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./theme/css/pure.css">
+    <link rel="stylesheet" href="./theme/css/pygments.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.1/jquery.fitvids.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".content").fitVids();
+        });
+    </script>
+</head>
+
+<body>
+    <div class="pure-g-r" id="layout">
+        <div class="sidebar pure-u">
+            <div class="cover-img" style="background-image: url('/images/Carl2.jpg')">
+                <div class="cover-body">
+                    <header class="header">
+                        <hgroup>
+                            <h1 class="brand-main"><a href=".">Carl Reynolds</a></h1>
+                            <p class="tagline"></p>
+                                <p class="links"><a href="./pages/about.html"></a></p>
+                                <p class="social">
+                                    <a href="https://github.com/drcjar/">
+                                        <i class="fa fa-github fa-3x"></i>
+                                    </a>
+                                    <a href="https://uk.linkedin.com/in/carl-reynolds-36700025">
+                                        <i class="fa fa-linkedin-square fa-3x"></i>
+                                    </a>
+                                    <a href="https://twitter.com/drcjar">
+                                        <i class="fa fa-twitter-square fa-3x"></i>
+                                    </a>
+                                    <a href="mailto:drcjar@gmail.com">
+                                        <i class="fa fa-envelope-square fa-3x"></i>
+                                    </a>
+                                </p>
+                        </hgroup>
+                    </header>
+                </div>
+            </div>
+        </div>
+    <div class="pure-u">
+        <div class="content">
+            <section class="post">
+                <header class="post-header">
+                    <h1>Prescribing Analytics: how drug data can save the NHS millions</h1>
+                        <p class="post-meta">
+                            // under                                 <a class="post-category" href="./tag/nhs.html">nhs</a>
+                                <a class="post-category" href="./tag/prescribing.html">prescribing</a>
+                                <a class="post-category" href="./tag/analytics.html">analytics</a>
+                        </p>
+                </header>
+            </section>
+            <hr />
+<p>(This post was originally written for the <a href="http://blog.okfn.org/">OKFN blog</a>)</p>
+<p>Last week saw the launch of <a href="http://prescribinganalytics.com/">prescribinganalytics.com</a> (covered in the <a href="http://www.economist.com/news/britain/21567980-how-scrutiny-freely-available-data-might-save-nhs-money-beggar-thy-neighbour">Economist</a> and elsewhere). At present it’s “just” a nice data visualisation of some interesting open data that show the NHS could potentially save millions from its drug budget. I say “just” because we’re in discussions with several NHS organizations about providing a richer, tailored, prescribing analytics service to support the best use of NHS drug budgets.</p>
+<p>Working on the project was a lot of fun, and to my mind the work nicely shows the spectacular value of open data when combined with people and internet. The data was, and is, <a href="http://data.gov.uk/dataset/gp-practice-prescribing-data">out there</a>. All 11 million or so rows of it per month, detailing every GP prescription in England. Privately, some people expressed concern that failure to do anything with the data so far was undermining efforts to make it public at all.</p>
+<p>Once data is open it takes time for people to discover a reason for doing something interesting with it, and to get organized to do it. There’s no saying what people will use the data for, but provided the data isn’t junk there’s a good bet that sooner or later something will happen.</p>
+<p>The story of how <a href="http://prescribinganalytics.com/">prescribinganalytics.com</a> came to be is illustrative, so I’ll briefly tell my version of it here… Fran (CEO of <a href="https://www.mastodonc.com/">https://www.mastodonc.com/</a>) emailed me a few months ago with the news that she was carrying out some testing using the GP prescribing data.</p>
+<p>I replied and suggested looking at prescriptions of proprietary vs generic ACE-inhibitors (a drug that lowers blood pressure) and a few other things. I also cc’d <a href="http://www.badscience.net/">Ben Goldacre</a> and my good friend <a href="http://sickpopulations.wordpress.com/">Tom Yates</a>. Ben shared an excellent idea he’d had a while ago for a website with a naughty name that showed how much money was wasted on expensive drugs where there was an identically effective cheaper option and suggested looking at statins (a class of drug that reduces the risk of stroke, heart attack, and death) first.</p>
+<p>Fran did the data analysis and made beautiful graphics. Ben, Tom, and I, with help from a handful of other friends, academics, and statisticians provided the necessary domain expertise to come up with an early version of the site which had a naughty name. We took counsel and decided it’d be more constructive, and more conducive to our goals, not to launch the site with a naughty name. A while later the <a href="http://www.theodi.org/">http://www.theodi.org/</a> offered to support us in delivering prescribinganalytics.com. In no particular order, Bruce (CTO of <a href="https://www.mastodonc.com/">https://www.mastodonc.com/</a>), Ayesha (<a href="http://londonlime.net/">http://londonlime.net/</a>), Sym Roe, Ross Jones, and David Miller collaborated with the original group to make the final version.</p>
+<p>I’d call the way we worked <a href="http://en.wikipedia.org/wiki/Peer_production">peer production</a>, a diverse group of people with very different skill sets and motivations formed a small self-organizing community to achieve the task of delivering the site. I think the results speak for themselves, it’s exciting, and this is just the beginning :-)</p>
+<p><strong>Notes</strong></p>
+<ol type="1">
+<li><p><a href="https://www.mastodonc.com/">Mastodon C</a> is a start-up company currently based at <a href="http://www.theodi.org/">The Open Data Institute</a>. The Open Data Institute’s mission is to catalyse the evolution of an open data culture to create economic, environmental, and social value.</p></li>
+<li><p><a href="http://www.openhealthcare.org.uk/">Open Health Care UK</a> is a health technology start-up</p></li>
+<li><p><a href="http://www.badscience.net/about-dr-ben-goldacre/">About Ben Goldacre</a></p></li>
+<li><p>Full research findings and details on methodology can be found at: <a href="http://www.prescribinganalytics.com/">http://www.prescribinganalytics.com/</a></p></li>
+</ol>
+
+            <a href="#" class="go-top">Go Top</a>
+<footer class="footer">
+    <p>&copy; Carl Reynolds &ndash;
+        Built with <a href="https://github.com/PurePelicanTheme/pure-single">Pure Theme</a>
+        for <a href="http://blog.getpelican.com/">Pelican</a>
+    </p>
+</footer>        </div>
+    </div>
+    </div>
+    <script>
+        var $top = $('.go-top');
+
+        // Show or hide the sticky footer button
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 200) {
+                $top.fadeIn(200);
+            } else {
+                $top.fadeOut(200);
+            }
+        });
+
+        // Animate the scroll to top
+        $top.click(function(event) {
+            event.preventDefault();
+            $('html, body').animate({scrollTop: 0}, 300);
+        })
+
+        // Makes sure that the href="#" attached to the <a> elements
+        // don't scroll you back up the page.
+        $('body').on('click', 'a[href="#"]', function(event) {
+            event.preventDefault();
+        });
+    </script>
+
+</body>
+</html>
