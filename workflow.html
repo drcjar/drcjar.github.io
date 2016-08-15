@@ -6,7 +6,7 @@
     <meta name="description" content="Carl Reynolds, ">
 
 
-        <title>Colophon for my digital life circa 2016 // Carl Reynolds // </title>
+        <title>Pandoc Pelican Practice // Carl Reynolds // </title>
 
 
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
@@ -56,27 +56,93 @@
         <div class="content">
             <section class="post">
                 <header class="post-header">
-                    <h1>Colophon for my digital life circa 2016</h1>
+                    <h1>Pandoc Pelican Practice</h1>
                         <p class="post-meta">
                             // under                                 <a class="post-category" href="./tag/meta.html">meta</a>
                                 <a class="post-category" href="./tag/colophon.html">colophon</a>
+                                <a class="post-category" href="./tag/workflow.html">workflow</a>
                         </p>
                 </header>
             </section>
-            <hr />
-<p>As of today I've decided to use pandoc markdown <a href="https://github.com/dsanson/Pandoc.tmbundle/blob/master/Support/doc/cheatsheet.markdown">(with the assistance of this cheatsheet)</a>. I'm planning on getting <a href="http://unconj.ca/blog/linting-prose-in-emacs.html">emacs going with prose-lint integration</a> soon.</p>
-<p>Anyway the pandoc markdown that I make can then be turned into:</p>
+            <p><a href="https://gist.github.com/drcjar/0c2121a8bd820b8579432b0888f97a60">This</a> is written in a thingy called <a href="http://lmgtfy.com/?q=markdown#">markdown</a> It's good because in addition to letting you do links and being easy to read and type you can do lists and things. (it's then made into a blog by running pelican on the content and pushing it to my githubs...)</p>
 <ol type="1">
-<li><p><a href="http://blog.getpelican.com/">pelican blog</a> and rendered reasonably nice looking through the use of a special <a href="https://github.com/PurePelicanTheme/pure-single">pelican blog theme</a>. My pelicon configuration file lives <a href="https://gist.github.com/drcjar/606fe4c29d6df2fe27a3">here</a>.</p></li>
-<li><p>LaTeX if necessary for academical writing. I use bibtex with <a href="http://jabref.sourceforge.net/">jabref</a> currently for managing my bibliography. I use <a href="https://www.ncbi.nlm.nih.gov/pubmed/">pubmed</a> and <a href="https://scholar.google.co.uk/">google scholar</a> for finding the things. <a href="https://sci-hub.io/">Sci-hub</a> appears good for access problems. Though there's actually even a <a href="https://github.com/tompollard/phd_thesis_markdown">markdown thesis template</a> converting to LaTeX is v nice to have as a backup.</p></li>
-<li><p>Word for collaborating on academical writing with people that wont use anything else.</p></li>
+<li>Like this</li>
+<li>List of things</li>
+<li>blah blah</li>
 </ol>
-<p>For me it generally all happens on a thinkpad running ubuntu. And depends a bit on some <a href="https://dont-be-afraid-to-commit.readthedocs.org/en/latest/">python, pip, virtual env and github basics</a> which I supplement with <a href="https://virtualenvwrapper.readthedocs.org/en/latest/">virtualenv wrapper</a>.</p>
-<p>For analytical work I'm lately making use of python in <a href="http://jupyter.readthedocs.org/en/latest/index.html">Jupyter Notebook</a> with <a href="https://github.com">github</a> and <a href="https://nbviewer.jupyter.org/">nbviewer</a> and also <a href="https://gist.github.com/">github gists</a> with <a href="https://bl.ocks.org/">Bl.ocks</a> for sharing. With respect to python libraries I Ahave mostly been using <a href="http://pandas.pydata.org/">pandas</a>, <a href="http://matplotlib.org/">matplotlib</a>, <a href="http://statsmodels.sourceforge.net/">statsmodels</a> and <a href="https://github.com/python-visualization/folium">folium</a>.</p>
-<p>My editor of choice currently is vim with <a href="https://github.com/amix/vimrc">The Ultimate vimrc</a>.</p>
+<p>Or you can do points</p>
+<ul>
+<li>point one</li>
+<li>point two</li>
+</ul>
+<p>And you can include pictures from the interweb</p>
+<figure>
+<img src="https://s-media-cache-ak0.pinimg.com/736x/c4/8b/fe/c48bfed346eeb72df0d2418a809c7756.jpg" title="omg what a nice dog" alt="It&#39;s a dog" /><figcaption>It's a dog</figcaption>
+</figure>
+<p>And <em>stress</em> things <strong>lots</strong> etc etc. I haven't really yet learnt all the markdown things one can do but what really makes it ace is there is then a thingy called <a href="lmgtfy.com/?q=pandoc#">pandoc</a> that converts this thingy into all the other things.</p>
+<p>Yup. And footers are a thing too<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a></p>
+<p>For example if we save this as Cppp.md we can then run the command</p>
+<blockquote>
+<p>'pandoc Cppp.md -o Cppp.doc'</p>
+</blockquote>
+<p>to make a word doc. Just change the '.doc' for '.pdf' or '.html' etc and you can have that too. Examples attached. I think it's quite good anyway....Note that actually to get a .doc/.pdf/.html with citations the command is different (see below).</p>
+<h2 id="not-sold-yet-it-can-also-do-smaller-headings-too-like-this-and-other-things-like-referencing">Not sold yet? It can also do smaller headings too (like this) and other things like referencing</h2>
+<p>A major feature in support for inline html and referencing using whatever you like<span class="citation" data-cites="Albin1999"><sup>1</sup></span>. Here I'm using my asbestos researches bibliography file 'IPFAEA.bib' specified above in the metadata and specifying that it be formatted for the nejm.</p>
+<p>To make a pdf the command becomes:</p>
+<blockquote>
+<p>'pandoc Cppp.md --filter pandoc-citeproc -o Cppp.pdf'</p>
+</blockquote>
+<p>To make a doc the command becomes:</p>
+<blockquote>
+<p>'pandoc Cppp.md --filter pandoc-citeproc -o Cppp.docx'</p>
+</blockquote>
+<p>And it can make tables using a variety of input formats (that you'd automagically generate using a tool) e.g grid table</p>
+<table style="width:74%;">
+<colgroup>
+<col style="width: 22%" />
+<col style="width: 22%" />
+<col style="width: 29%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Fruit</th>
+<th>Price</th>
+<th>Advantages</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><p>Bananas</p></td>
+<td><p>$1.34</p></td>
+<td><ul>
+<li>built-in wrapper</li>
+<li>bright color</li>
+</ul></td>
+</tr>
+<tr class="even">
+<td><p>Oranges</p></td>
+<td><p>$2.10</p></td>
+<td><ul>
+<li>cures scurvy</li>
+<li>tasty</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+<p>It's even useful for making <a href="http://pandoc.org/README.html#producing-slide-shows-with-pandoc">slides</a>. Just need to stick reveal.js folder in the same directory as the markdown then run e.g pandoc -t revealjs --self-contained -s Cppp.md -o Cppp.html</p>
+<p>Note that a thing which isn't quite right (yet) is that the metadata needs to be structured as above for pelican but for pandoc all the things need to be enclosed between ---</p>
+<h2 id="references" class="unnumbered">References</h2>
 <div id="refs" class="references">
-
+<div id="ref-Albin1999">
+<p>1. Albin M, Magnani C, Krstev S, Rapiti E, Shefer I. Asbestos and cancer: An overview of current trends in europe. Environ Health Perspect 1999;107 Suppl 2:289–98. </p>
 </div>
+</div>
+<section class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>totally a supported thing.<a href="#fnref1">↩</a></p></li>
+</ol>
+</section>
 
             <a href="#" class="go-top">Go Top</a>
 <footer class="footer">

@@ -71,15 +71,18 @@
 <p>Supposing, as a doctor, I look to a systematic review on the management of heart attacks to inform how I treat my patient, I sadly have no assurance that the systematic review does not rely on research papers that have been retracted. This is suboptimal.</p>
 <p>Open access, post-publication peer review, and better version control would be three useful features that a modern scientific publishing model optimized to enable good science should support.</p>
 <p>In the meantime, inspired by a lunchtime conversation with our friend and director Ben Goldacre (it was all his idea), we pondered the question:</p>
-<blockquote class="custom-quote"><p>
+<blockquote class="custom-quote">
+<p>
 <i class="fa fa-question fa-3x"></i> What is the most cited retracted paper?
-</p></blockquote>
-
+</p>
+</blockquote>
 <p>It turns out <a href="http://www.pubmed.gov">PubMed</a> already has a nice API that can return a <a href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&amp;retmode=json&amp;retmax=10000&amp;term=%22retracted%20publication%22">list</a> of PubMed ids for papers that have been retracted. Next we needed a means of knowing how many times each retracted paper was cited. There are a few ways of doing this but we went with using google scholar after Alf Eaton told us about it on <a href="https://twitter.com/invisiblecomma/status/582904870644113408">twitter</a>. It's possible to search google scholar for the articles citing a particular pubmed id, here's an <a href="https://scholar.google.com/scholar?cites=http://www.ncbi.nlm.nih.gov/pubmed/19336536">example</a>.</p>
 <p>Finally, we used wget to download all of the google scholar search results. This infamous <a href="http://www.thelancet.com/journals/lancet/article/PIIS0140-6736%2897%2911096-0/abstract">paper</a> 'Ileal-lymphoid-nodular hyperplasia, non-specific colitis, and pervasive developmental disorder in children.' was the winner with 2070 <a href="https://scholar.google.com/scholar?cites=http://www.ncbi.nlm.nih.gov/pubmed/9500320">citations</a>!</p>
 <p>Here's the top ten:</p>
 <table class="table table-striped">
-<tbody><tr><td>
+<tbody>
+<tr>
+<td>
 Citations
 </td>
 <td colspan="2">
@@ -95,7 +98,8 @@ Journal
 Pubdate
 </td>
 </tr>
-<tr><td>
+<tr>
+<td>
 2070
 </td>
 <td colspan="2">
@@ -111,7 +115,8 @@ Lancet
 28/02/1998
 </td>
 </tr>
-<tr><td>
+<tr>
+<td>
 2050
 </td>
 <td colspan="2">
@@ -127,7 +132,8 @@ Science (New York, N.Y.)
 21/01/2005
 </td>
 </tr>
-<tr><td>
+<tr>
+<td>
 1550
 </td>
 <td colspan="2">
@@ -143,7 +149,8 @@ Blood
 01/11/2001
 </td>
 </tr>
-<tr><td>
+<tr>
+<td>
 1250
 </td>
 <td colspan="2">
@@ -159,7 +166,8 @@ Lancet
 11/01/2003
 </td>
 </tr>
-<tr><td>
+<tr>
+<td>
 1040
 </td>
 <td colspan="2">
@@ -175,7 +183,8 @@ Cancer research
 15/04/2005
 </td>
 </tr>
-<tr><td>
+<tr>
+<td>
 825
 </td>
 <td colspan="2">
@@ -191,7 +200,8 @@ Nature medicine
 01/03/2000
 </td>
 </tr>
-<tr><td>
+<tr>
+<td>
 805
 </td>
 <td colspan="2">
@@ -207,7 +217,8 @@ Science (New York, N.Y.)
 12/03/2004
 </td>
 </tr>
-<tr><td>
+<tr>
+<td>
 755
 </td>
 <td colspan="2">
@@ -223,7 +234,8 @@ Circulation
 13/08/2002
 </td>
 </tr>
-<tr><td>
+<tr>
+<td>
 732
 </td>
 <td colspan="2">
@@ -239,7 +251,8 @@ Science (New York, N.Y.)
 07/09/2001
 </td>
 </tr>
-<tr><td>
+<tr>
+<td>
 616
 </td>
 <td colspan="2">
@@ -255,7 +268,8 @@ Science (New York, N.Y.)
 07/06/1996
 </td>
 </tr>
-<tr><td>
+<tr>
+<td>
 607
 </td>
 <td colspan="2">
@@ -271,12 +285,15 @@ Science (New York, N.Y.)
 01/11/2002
 </td>
 </tr>
-</tbody></table>
-
+</tbody>
+</table>
 <p>You can reproduce our results or view our workings <a href="https://github.com/drcjar/retractshons">over on Github</a>.</p>
 <p>There are of course many reasons other than the author making up the results for a paper to be retracted. There are also many circumstances in which citing a retracted paper is legitimate. For a more nuanced discussion of retractions there's a nice <a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0044118">Comprehensive Survey of Retracted Articles from the Scholarly Literature</a> in PLOS and the excellent <a href="http://retractionwatch.com/">Retraction Watch</a> covers the details of individual retractions as they happen.</p>
 <p>Anyway, it was fun to examine retractions. We'd love to explore this further so if we can be of service to you do get in touch.</p>
 <p>Perhaps a project for <a href="http://www.nhshackday.com">NHS Hack Day</a>?</p>
+<div id="refs" class="references">
+
+</div>
 
             <a href="#" class="go-top">Go Top</a>
 <footer class="footer">
