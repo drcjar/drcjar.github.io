@@ -24,33 +24,20 @@
 </head>
 
 <body>
-    <div class="pure-g-r" id="layout">
-        <div class="sidebar pure-u">
-            <div class="cover-img" style="background-image: url('/images/Carl3.jpg')">
-                <div class="cover-body">
-                    <header class="header">
-                        <hgroup>
-                            <h1 class="brand-main"><a href=".">Carl Reynolds</a></h1>
-                            <p class="tagline"></p>
-                                <p class="social">
-                                    <a href="https://github.com/drcjar/">
-                                        <i class="fa fa-github fa-3x"></i>
-                                    </a>
-                                    <a href="https://uk.linkedin.com/in/carl-reynolds-36700025">
-                                        <i class="fa fa-linkedin-square fa-3x"></i>
-                                    </a>
-                                    <a href="https://twitter.com/drcjar">
-                                        <i class="fa fa-twitter-square fa-3x"></i>
-                                    </a>
-                                    <a href="mailto:drcjar@gmail.com">
-                                        <i class="fa fa-envelope-square fa-3x"></i>
-                                    </a>
-                                </p>
-                        </hgroup>
-                    </header>
-                </div>
-            </div>
-        </div>
+<div class="pure-g-r" id="layout">
+    <div class="sidebar sidebar-article pure-u">
+        <header class="header-article">
+            <hgroup>
+                <a href="./author/carl-reynolds.html" title="See posts by Carl Reynolds">
+                </a>
+                <h2 class="article-info">Carl Reynolds</h2>
+                <small class="about-author"></small>
+                <h5>Published</h5>
+                <p>Mon 05 November 2018</p>
+                <a href="/">&larr;Home</a>
+            </hgroup>
+        </header>
+    </div>
     <div class="pure-u">
         <div class="content">
             <section class="post">
@@ -66,8 +53,8 @@
             <p>Today I read another UK government policy paper that wasn't about global warming, brexit, or distributive justice. It was about <a href="https://www.gov.uk/government/publications/the-future-of-healthcare-our-vision-for-digital-data-and-technology-in-health-and-care">&quot;The future of healthcare: our vision for digital, data and technology in health and care&quot;</a>.</p>
 <p>I was excited about reading it because for a long time I've personally suffered as a user of painful by design and impossible to improve NHS IT and I thought a new health secretary with an interest in technology, and a strong <a href="https://twitter.com/jukesie/status/1038040891401883649">support team</a>, could really help.</p>
 <h1 id="the-low-down">The low down</h1>
-<p>It's encouraging that there's a clear early acknowledgment that we're a million miles from having the basics needed for a modern digital health service in place, that the wonky excuse we have in its place is frustrating for users, and that there's an enormous ongoing opporunity cost to not fixing this.</p>
-<p>As an academic medical doctor who works at an <a href="https://www.england.nhs.uk/digitaltechnology/connecteddigitalsystems/exemplars/acute-global-digital-exemplars/">Acute Global Digital Exemplar</a> I (genuinely) enjoy the convienience of paperless notes even though the user interface is awful and seemingly impossible to improve. I enjoy ready access to uptodate (a handy evidence-based clinical decision support resource) but can't look at the bnf online (a pharmaceutical reference book) because we run IE11 and the site doesn't render properly or get the problem fixed - because there's not a culture of responding to <a href="https://twitter.com/drcjar/status/1053588664461213696">bug reports</a>?</p>
+<p>It's encouraging that there's a clear early acknowledgment that we're a million miles from having the basics needed for a modern digital health service in place, that the wonky excuse we have in its place is frustrating for users, and that there's an enormous ongoing opportunity cost to not fixing this.</p>
+<p>As an academic medical doctor who works at an <a href="https://www.england.nhs.uk/digitaltechnology/connecteddigitalsystems/exemplars/acute-global-digital-exemplars/">Acute Global Digital Exemplar</a> I (genuinely) enjoy the convenience of paperless notes even though the user interface is awful and seemingly impossible to improve. I enjoy ready access to uptodate (a handy evidence-based clinical decision support resource) but can't look at the bnf online (a pharmaceutical reference book) because we run IE11 and the site doesn't render properly or get the problem fixed - because there's not a culture of responding to <a href="https://twitter.com/drcjar/status/1053588664461213696">bug reports</a>?</p>
 <p>It really would be good if it were actually possible for users to contribute to improving the digital infrastructure at the hospital.</p>
 <p>The policy document cites genomics, personalised medicines, AI, and robots, as important nice things that we can't have until we sort the basics. The document suggests that key to getting the basics in place include:</p>
 <ol start="0" type="1">
@@ -75,7 +62,7 @@
 <li>Open standards, Interoperability, and Openness (and Modularity)</li>
 <li>Secure identity</li>
 </ol>
-<p>GDS was refreshing because it delivered well designed and pleasant to use digital services like <a href="https://www.gov.uk/register-to-vote">register to vote</a> at a time when we were used to govenment websites being a pain to navigate and requiring convoluted gateway ID via snail mail incantations. It'd be great to see the NHS adopt internet era technology and culture in this way.</p>
+<p>GDS was refreshing because it delivered well designed and pleasant to use digital services like <a href="https://www.gov.uk/register-to-vote">register to vote</a> at a time when we were used to government websites being a pain to navigate and requiring convoluted gateway ID via snail mail incantations. It'd be great to see the NHS adopt internet era technology and culture in this way.</p>
 <p>Open standards, Interoperability, and Openness. The devil is in the <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3221346/">detail</a>, open standards are good because they facilitate interoperability (improving patient care) and competition (reducing costs). In practice to achieve this <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3221346/">open standards need open source software implementations</a>. Modularity features heavily in open source development and would be good because it should make for more competition (reducing costs) and improved interoperability.</p>
 <p>I've not noticed insecure identity for healthcare professionals or patients being a barrier to the delivery of healthcare. On the contrary, I have noticed efforts to use identity checks to deny <a href="https://www.theguardian.com/society/2017/feb/07/health-tourism-claims-distraction-from-nhs-real-problems">people access to healthcare</a>.</p>
 <p>Towards the end of the document there's a &quot;We will know we have achieved our goals when:&quot; bit. The first one of the whens is:</p>
@@ -83,24 +70,25 @@
 <p>&quot;a healthy person can stay healthy and active (using wearables, diet-tracking apps) and can co-ordinate with their GP or other health professional about targeted preventative care&quot;</p>
 </blockquote>
 <p>This seems to imply that a healthy person can stay healthy by taking responsibility and accessing targeted preventable care. Unfortunately much disease is not currently preventable and many means of preventing disease are not available to the individual.</p>
-<p>It is not clear how much disease the health service can prevent, and what proportion of resource should be allocated. It's defintely not desirable to blame the sick for not taking responsibility and preventing their ill health.</p>
-<p>Preventative measures of disease likely to produce a bigger bang for buck than wearables and diet-tracking apps might include access to good housing, sanitation, better cycle paths, improved physical safety (not getting stabbed), sugar tax, alcohol tax, carbon tax, addressing air pollution, NHS free at point of care for all (humanitarian and sound public health reasons), and not selling arms generally and especially not to despotic regimes.</p>
+<p>It is not clear how much disease the health service can prevent, and what proportion of resource should be allocated. It's definitely not desirable to blame the sick for not taking responsibility and preventing their ill health.</p>
+<p>Preventive measures of disease likely to produce a bigger bang for buck than wearables and diet-tracking apps might include access to good housing, sanitation, better cycle paths, improved physical safety (not getting stabbed), sugar tax, alcohol tax, carbon tax, addressing air pollution, NHS free at point of care for all (humanitarian and sound public health reasons), and not selling arms generally and especially not to despotic regimes.</p>
 <blockquote>
 <p>&quot;patients, people who use care services and their carers and families should not have to repeat themselves – they should be reassured that the treatment they are given is based on their care provider having access to relevant information&quot;</p>
 </blockquote>
-<p>I appreciate that this could be tedious. As a hospital doctor I frequently ask questions of patients and their carers and families that I expect a junior colleague to have already asked. I do it because I'm interested in my patients and I hope that I might be of service to them. From training and experience I might uncover something new that changes their care or increases my confidence that they are recieving the correct treatment.</p>
-<p>Annex B lists sample standards and user needs such as the NHS Number. I have only very rarely used an NHS Number in practice because a name, date of birth, and address - which a patient can confirm and are generally useful to know - normally adequately match them to a hospital number that can be used to find everything else.</p>
+<p>I appreciate that this could be tedious. As a hospital doctor I frequently ask questions of patients and their carers and families that I expect a junior colleague to have already asked. I do it because I'm interested in my patients and I hope that I might be of service to them. From training and experience I might uncover something new that changes their care or increases my confidence that they are receiving the correct treatment.</p>
+<p>Annex B lists sample standards and user needs such as the NHS Number. I have only rarely used an NHS Number in practice because a name, date of birth, and address - which a patient can confirm and are generally useful to know - normally adequately match them to a hospital number that can be used to find everything else.</p>
 <p>So there's some good and some less good in the policy document and still much to be done to make NHS IT less bad. Onwards!</p>
 
+            <div class="hr"></div>
             <a href="#" class="go-top">Go Top</a>
 <footer class="footer">
     <p>&copy; Carl Reynolds &ndash;
-        Built with <a href="https://github.com/PurePelicanTheme/pure-single">Pure Theme</a>
+        Built with <a href="https://github.com/PurePelicanTheme/pure">Pure Theme</a>
         for <a href="http://blog.getpelican.com/">Pelican</a>
     </p>
 </footer>        </div>
     </div>
-    </div>
+</div>
     <script>
         var $top = $('.go-top');
 
@@ -135,6 +123,5 @@
             pageTracker._trackPageview();
             } catch(err) {}
     </script>
-
 </body>
 </html>
