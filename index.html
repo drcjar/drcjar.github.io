@@ -78,6 +78,11 @@
       .btn.ghost:hover{background:var(--teal-tint)}
       .nav-cta{padding:9px 18px}
       @media(max-width:760px){.nav a:not(.btn){display:none}}
+      @media(max-width:560px){
+        .topbar .wrap{flex-wrap:wrap;height:auto;gap:10px;padding-top:10px;padding-bottom:10px}
+        .nav{width:100%}
+        .nav-cta{width:100%;text-align:center;padding:11px 18px}
+      }
 
       /* Hero */
       .hero{background:linear-gradient(180deg,var(--teal-tint),#fff);border-bottom:1px solid var(--line)}
@@ -385,7 +390,7 @@
     <div class="box">
       <h3>Request an appointment</h3>
       <p style="margin:0 0 16px;color:#b9cace">Email my secretary, John Oniye, with your name, contact number and a brief note of what you'd like to be seen for.</p>
-      <a class="btn" style="display:block;text-align:center;margin-bottom:20px" href="mailto:pa@carlreynolds.net?subject=Private%20appointment%20enquiry" data-cta="email-secretary">Email pa@carlreynolds.net</a>
+      <a class="btn" style="display:block;text-align:center;margin-bottom:20px;white-space:normal" href="mailto:pa@carlreynolds.net?subject=Private%20appointment%20enquiry" data-cta="email-secretary">Email pa@carlreynolds.net</a>
       <p style="margin:0 0 .2em;color:#b9cace">Prefer to call, or it's urgent?</p>
       <a class="big" href="tel:+442033931124" data-cta="call-secretary">020 3393 1124</a>
       <p style="margin:16px 0 0;color:#b9cace;font-size:.9rem">We aim to reply to emails within 24 hours (Monday–Friday) — please call if your enquiry is urgent.</p>
