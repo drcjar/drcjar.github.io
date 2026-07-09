@@ -45,7 +45,7 @@
         --maxw:1080px;
       }
       *{box-sizing:border-box}
-      html{scroll-behavior:smooth}
+      html{scroll-behavior:smooth;scroll-padding-top:78px}
       body{
         margin:0;color:var(--ink);background:var(--paper);
         font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
@@ -79,6 +79,7 @@
       .nav-cta{padding:9px 18px}
       @media(max-width:760px){.nav a:not(.btn){display:none}}
       @media(max-width:560px){
+        html{scroll-padding-top:132px}
         .topbar .wrap{flex-wrap:wrap;height:auto;gap:10px;padding-top:10px;padding-bottom:10px}
         .nav{width:100%}
         .nav-cta{width:100%;text-align:center;padding:11px 18px}
