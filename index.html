@@ -31,6 +31,41 @@
       gtag('config', 'G-QRS930HY94');
     </script>
 
+    <!-- Structured data for search engines / local results -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr Carl Reynolds",
+      "alternateName": "Dr Carl Reynolds — Consultant Respiratory Physician",
+      "medicalSpecialty": "Pulmonary",
+      "url": "https://carlreynolds.net/",
+      "image": "https://carlreynolds.net/images/carl-pro-square.jpg",
+      "telephone": "+44-20-3393-1124",
+      "email": "pa@carlreynolds.net",
+      "priceRange": "££",
+      "description": "Consultant Respiratory Physician offering private clinics for lung cancer, asthma, chronic cough, breathlessness, COPD and sleep apnoea at The Wellington Hospital, London.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "The Wellington Hospital, North Building, 27 Circus Road",
+        "addressLocality": "London",
+        "postalCode": "NW8 6PD",
+        "addressCountry": "GB"
+      },
+      "availableService": [
+        { "@type": "MedicalProcedure", "name": "Bronchoscopy" },
+        { "@type": "MedicalProcedure", "name": "EBUS-TBNA" },
+        { "@type": "MedicalProcedure", "name": "Pleural procedures" }
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Wednesday",
+        "opens": "17:00",
+        "closes": "20:00"
+      }
+    }
+    </script>
+
     <style>
       :root{
         --ink:#16242b;        /* near-black text */
@@ -46,6 +81,13 @@
       }
       *{box-sizing:border-box}
       html{scroll-behavior:smooth;scroll-padding-top:78px}
+      /* visible keyboard focus (warm accent reads on both light and dark sections) */
+      :where(a,button,.btn,.card):focus-visible{outline:3px solid var(--warm);outline-offset:3px}
+      @media(prefers-reduced-motion:reduce){
+        html{scroll-behavior:auto}
+        *{transition:none!important;animation:none!important}
+        .btn:hover,.card:hover{transform:none}
+      }
       body{
         margin:0;color:var(--ink);background:var(--paper);
         font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
@@ -83,6 +125,17 @@
         .topbar .wrap{flex-wrap:wrap;height:auto;gap:10px;padding-top:10px;padding-bottom:10px}
         .nav{width:100%}
         .nav-cta{width:100%;text-align:center;padding:11px 18px}
+      }
+
+      /* persistent mobile action bar (nav links are hidden <=760px) */
+      .mobilebar{display:none}
+      @media(max-width:760px){
+        .mobilebar{display:flex;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:60;
+          padding:10px 14px;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);
+          border-top:1px solid var(--line);box-shadow:0 -6px 20px -12px rgba(22,36,43,.45)}
+        .mobilebar a{padding-top:13px;padding-bottom:13px}
+        .mobilebar .book{flex:1;text-align:center}
+        body{padding-bottom:70px}
       }
 
       /* Hero */
@@ -165,7 +218,7 @@
       footer.site{background:#0c171b;color:#9fb2b8;font-size:.9rem;padding:38px 0}
       footer.site a{color:#cfe0e2}
       footer.site .links{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:14px}
-      .disclaimer{color:#6f868d;font-size:.82rem;margin-top:10px}
+      .disclaimer{color:#8fa4ab;font-size:.82rem;margin-top:10px}
     </style>
 </head>
 <body>
@@ -198,7 +251,7 @@
       </div>
     </div>
     <div class="portrait">
-      <img src="/images/carl-pro-square.jpg" alt="Dr Carl Reynolds, Consultant Respiratory Physician">
+      <img src="/images/carl-pro-square.jpg" alt="Dr Carl Reynolds, Consultant Respiratory Physician" width="600" height="600" fetchpriority="high" decoding="async">
     </div>
   </div>
 </section>
@@ -286,7 +339,7 @@
 <section id="about" class="about">
   <div class="wrap">
     <div>
-      <img src="/images/carl-pro.jpg" alt="Dr Carl Reynolds">
+      <img src="/images/carl-pro.jpg" alt="Dr Carl Reynolds" width="1024" height="683" loading="lazy" decoding="async">
     </div>
     <div>
       <p class="eyebrow">About Dr Reynolds</p>
@@ -423,6 +476,12 @@
     <p class="disclaimer">This website is for general information about my private practice and is not medical advice. If you have urgent or severe symptoms — such as sudden breathlessness, chest pain, or coughing up blood — seek urgent medical care or call 999. For NHS care, please see your GP.</p>
   </div>
 </footer>
+
+<!-- ============ MOBILE ACTION BAR ============ -->
+<nav class="mobilebar" aria-label="Quick actions">
+  <a class="btn book" href="#contact" data-cta="mobilebar-book">Book an appointment</a>
+  <a class="btn ghost" href="tel:+442033931124" data-cta="mobilebar-call" aria-label="Call the clinic secretary">Call</a>
+</nav>
 
 <script>
   /* Lightweight, privacy-friendly interaction tracking via GA4 (gtag).
